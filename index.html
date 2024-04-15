@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="idn">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-commerce Website</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #0e22d9;
+            color: #ffffff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        
+        header h1 {
+            margin: 0;
+        }
+        
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        
+        nav ul li {
+            display: inline-flex;
+            margin-right: 10px;
+        }
+        
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+        }
+        
+        main {
+            padding: 20px;
+        }
+        
+        .product {
+            border: 1px solid #bd0dd4;
+            padding: 10px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        footer {
+            background-color: #333;
+            color: #fff;
+            text-align: center;
+            padding: 10px 0;
+        }
+        
+        aside {
+            margin: auto;
+            width: 30%;
+            padding: 20px;
+        }
+        
+        #cart {
+            background-color: #f2f2f2;
+            padding: 10px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+        
+        #emptyCartButton {
+            width: 100%;
+            padding: 10px;
+            margin-top: 10px;
+            background-color: #4009e2;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        /* Responsive Styling */
+        @media only screen and (max-width: 600px) {
+            #emptyCartButton {
+                font-size: 14px; /* Adjust font size for smaller screens */
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome To nina_style</h1>
+        <nav>
+            <ul>
+                <li><a href="#">Beranda</a></li>
+                <li><a href="#">Produk</a></li>
+                <li><a href="#">Keranjang</a></li>
+                <li><a href="#">Kontak</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <div class="product">
+            <h2>Mieux Original Farasya Aleyna Zalina Nourah Nisrina Gamis Turkey Jumbo Ukuran LD 102/112/120</h2>
+            <p>Harga: Rp.270.000</p>
+            <img src="Gambar WhatsApp 2024-04-15 pukul 10.03.58_a2493857.jpg" alt="Mieux Original Farasya Aleyna Zalina Nourah Nisrina Gamis Turkey Jumbo Ukuran LD 102/112/120">
+            <button class="addToCartButton" onclick="addToCart('Mieux Original Farasya Aleyna Zalina Nourah Nisrina Gamis Turkey Jumbo Ukuran LD 102/112/120', 'Rp.270.000')">Tambahkan ke Keranjang</button>
+            <a href="https://shopee.co.id/Mieux-Original-Farasya-Aleyna-Zalina-Nourah-Nisrina-Gamis-Turkey-Jumbo-Ukuran-LD-102-112-120-i.255753935.7444527738?xptdk=5caca6c0-b5ea-48b9-92b7-4b4f74840e3a" class="buy-button">Beli</a>
+        </div>
+        <div class="product">
+            <h2>M231 Kemeja Pria Koko Panjang Coklat 2324B</h2>
+            <p>Harga: Rp.179.000</p>
+            <img src="Gambar WhatsApp 2024-04-15 pukul 10.04.02_71dc1d64.jpg" alt="M231 Kemeja Pria Koko Panjang Coklat 2324B">
+            <button class="addToCartButton" onclick="addToCart('M231 Kemeja Pria Koko Panjang Coklat 2324B', 'Rp.179.000')">Tambahkan ke Keranjang</button>
+            <a href="https://id.shp.ee/CJygxAy" class="buy-button">Beli</a>
+        </div>
+    </main>
+
+    <aside>
+        <div id="cart">
+            <h2>Keranjang</h2>
+            <div id="cartContent"></div>
+            <button id="emptyCartButton" onclick="emptyCart()">Kosongkan Keranjang</button>
+        </div>
+    </aside>
+
+    <footer>
+        <p>Hak Cipta &copy; 2024 NINA NOERSYANIA</p>
+    </footer>
+
+    <script>
+        function addToCart(productName, price) {
+            var cartContent = document.getElementById("cartContent");
+            var newItem = document.createElement("div");
+            newItem.textContent = productName + " - " + price;
+            cartContent.appendChild(newItem);
+            alert('Product ' + productName + ' has been added to the cart.');
+        }
+
+        function emptyCart() {
+            var cartContent = document.getElementById("cartContent");
+            cartContent.innerHTML = ""; // Clear the content of the cart
+            alert('Keranjang telah dikosongkan.');
+        }
+    </script>
+<main>
+    <!-- Product section -->
+    <div class="product">
+        <!-- Product details -->
+    </div>
+    <div class="product">
+        <!-- Product details -->
+    </div>
+
+    <!-- About Us section -->
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <P>Gamis dan koko adalah pakaian tradisional yang sering dipakai oleh kaum Muslim, khususnya di Indonesia. Gamis adalah pakaian panjang dengan potongan longgar yang melingkari tubuh, seringkali dipadukan dengan hijab. Sementara koko adalah pakaian laki-laki yang biasanya terbuat dari bahan yang ringan dan nyaman seperti katun, dengan potongan longgar dan seringkali memiliki kancing di bagian depan. Keduanya merupakan busana yang sangat populer untuk acara-acara keagamaan dan sering digunakan sebagai simbol identitas dan nilai-nilai keagamaan dalam budaya Muslim.</P>
+    </section>
+</main>
+<section id="contact">
+    <h2>Kontak Kami</h2>
+    <p>Jika Anda memiliki pertanyaan atau memerlukan bantuan, jangan ragu untuk menghubungi kami melalui:</p>
+    <ul>
+        <li>Email: <a href="mailto:info@ninanursyania@gmail.com">info@ninanursyania@gmail.com</a></li>
+        <li>Telepon: <a href="tel:https://wa.me/qr/AM2GVTSE5D32H1"></a>081563611175</li>
+        <li>Instagram: <a href="https://www.instagram.com/nrsyaniaa?igsh=aWp6cGM1cWc1a3Fm">@nrsyaniaa</a></li>
+    </ul>
+</section>
